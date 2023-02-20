@@ -13,12 +13,12 @@ import Image from "next/image";
 
 // data
 import { Stories } from "@/data/stories";
+import Link from "next/link";
 
 const StoryCards = (props: any) => {
   const story: Stories = props.story;
   return (
     <>
-      {console.log(story)}
       <Card maxW="sm">
         <CardBody>
           <Image
@@ -43,7 +43,9 @@ const StoryCards = (props: any) => {
         <CardFooter>
           <ButtonGroup spacing="2">
             <Button variant="solid" colorScheme="blue">
-              Read more
+              <Link href={`/detail/${encodeURIComponent(story.name)}`}>
+                Read more
+              </Link>
             </Button>
             <Button variant="ghost" colorScheme="blue" cursor={"pointer"}>
               Add to Favorites

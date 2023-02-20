@@ -29,9 +29,9 @@ export default function Home() {
         {stories.length &&
           stories.map((story) => {
             return (
-              <>
-                <StoryCards key={uuidv4()} story={story} />
-              </>
+              <div key={uuidv4()}>
+                <StoryCards story={story} />
+              </div>
             );
           })}
       </Flex>

@@ -6,12 +6,17 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 export const DesktopNav = () => {
   return (
     <Flex justifyContent={"space-between"} alignItems="center">
       <Box>
-        <Heading as={"h1"}>Painted Tales</Heading>
+        <Link href={"/"}>
+          <Heading as={"h1"} cursor="pointer">
+            Painted Tales
+          </Heading>
+        </Link>
       </Box>
       <Box>
         <UnorderedList style={{ listStyle: "none" }}>
