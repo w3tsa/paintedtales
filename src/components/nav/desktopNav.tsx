@@ -18,6 +18,7 @@ export const DesktopNav = () => {
           <Flex gap={4}>
             <ListItem cursor="pointer">All stories</ListItem>
             <ListItem cursor="pointer">Trending</ListItem>
+            <ListItem cursor="pointer">Favorites</ListItem>
           </Flex>
         </UnorderedList>
       </Box>
