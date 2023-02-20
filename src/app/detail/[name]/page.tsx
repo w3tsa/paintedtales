@@ -1,6 +1,5 @@
 "use client";
 
-import { DesktopNav } from "@/components/nav/desktopNav";
 import { stories } from "@/data/stories";
 import { Box, Container, Divider, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
@@ -16,9 +15,6 @@ export default function Page({ params }: { params: { name: string } }) {
             textAlign="center"
             key={story.name}
           >
-            <Box>
-              <DesktopNav />
-            </Box>
             <Heading mt={20}>{story.name}</Heading>
             <Container p={10}>
               <Image

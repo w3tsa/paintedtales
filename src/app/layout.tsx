@@ -1,8 +1,9 @@
 // app/layout.tsx
 "use client";
 
+import { DesktopNav } from "@/components/nav/desktopNav";
 import { CacheProvider } from "@chakra-ui/next-js";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider, Container } from "@chakra-ui/react";
 
 export default function RootLayout({
   children,
@@ -14,7 +15,14 @@ export default function RootLayout({
       <head />
       <body>
         <CacheProvider>
-          <ChakraProvider>{children}</ChakraProvider>
+          <ChakraProvider>
+            <Container maxW="90vw" mt={"20px"}>
+              <Box>
+                <DesktopNav />
+              </Box>
+            </Container>
+            {children}
+          </ChakraProvider>
         </CacheProvider>
       </body>
     </html>

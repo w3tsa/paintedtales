@@ -5,7 +5,6 @@ import { Box, Container, Flex, Heading } from "@chakra-ui/react";
 import { v4 as uuidv4 } from "uuid";
 
 // components
-import { DesktopNav } from "@/components/nav/desktopNav";
 import StoryCards from "@/components/story_cards/storyCards";
 
 // Data
@@ -16,9 +15,6 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <Container maxW="90vw" pt={"20px"}>
-      <Box>
-        <DesktopNav />
-      </Box>
       <Flex
         justifyContent={"space-around"}
         pt="10"
